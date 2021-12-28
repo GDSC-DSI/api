@@ -1,25 +1,14 @@
 import express from 'express'
-import bodyParser from 'body-parser'
+import router from './routes.js'
 import mongoose from 'mongoose'
-import cors from 'cors';
+import cors from 'cors'
 const app=express()
 const PORT=5000;
-app.use(bodyParser.json({limit:'30mb',extended:true}));
-app.use(bodyParser.urlencoded({limit:'30mb',extended:true}));
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
+const db = mongoose.connection
+db.on('error', (error) => console.error(error))
+db.once('open', () => console.log('Connected to Database'))
 app.use(cors());
-app.get('/three',(req,res)=>{
-    console.log("3");
-    res.send("three objects");
-   
-});
-app.get('/four',(req,res)=>{
-    console.log("4");
-    res.send("four objects");
-});
-app.get('',(req,res)=>{
-    console.log("homepage");
-    res.send("welcome to GDSC APP");
- 
-});
-
-app.listen(PORT,()=>console.log("running"));
+app.use("/", router);
+//db.connection
+app.listen(PORT|| process.env.PORT,()=>console.log("running on " + PORT));
