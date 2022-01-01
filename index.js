@@ -10,5 +10,5 @@ db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
 app.use(cors());
 app.use("/", router);
-//db.connection
+db.connection
 app.listen(PORT|| process.env.PORT,()=>console.log("running on " + PORT));
