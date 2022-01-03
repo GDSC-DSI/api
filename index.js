@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 const app=express()
 const PORT=5000;
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
+mongoose.connect("mongodb+srv://GDSC:Pratik2902@cluster0.vsofg.mongodb.net/timetable?retryWrites=true&w=majority", { useNewUrlParser: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
