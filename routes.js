@@ -6,7 +6,7 @@ router.get('/pk', async (req, res) => {
     try {
       const subscribers = await TimeTable.find({id:req.query.id})
     //   console.log(subscribers[0].tt[0][1])
-      res.json(subscribers[0])
+      res.json(subscribers[0].tt[req.query.day])
     } catch (err) {
       res.status(500).json({ message: err.message })
     }
