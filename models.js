@@ -1,4 +1,4 @@
-import {mongoose} from "mongoose"
+import mongoose from 'mongoose'
 
 var Schema = mongoose.Schema;
 
@@ -14,6 +14,7 @@ var TimeTableSchema = new Schema({
        }
     ],
 	
-}, {timestamps: true});
+}, {timestamps: true})
 
-export default  mongoose.model("timetable", TimeTableSchema)
+const TimeTable = new mongoose.model("TimeTable", TimeTableSchema)
+export default TimeTable;
