@@ -14,8 +14,8 @@ router.get('/gdsc', async (req, res) => {
  
   router.post('/post', async (req, res) => {
     const timetable = new TimeTable({
-            id: "19ECEB",
-            tt:[["MEP","DCS","DSP","ELE-A","DSDV","DSDV TUT", "TUT"],["5B1 DSP LAB/ 5B2 HDL LAB","5B1 DSP LAB/ 5B2 HDL LAB","5B1 DSP LAB/ 5B2 HDL LAB","ELE-B","DSP","DSP TUT","TUT"],["DSP","DCS","MEP","ELE-A","5B2-DSP LAB / 5B3 HDL LAB","5B2-DSP LAB / 5B3 HDL LAB","5B2-DSP LAB / 5B3 HDL LAB"],["DCS","DSDV","ET","ELE-B","MEP","MEP TUT"],["DSDV","DSP","ET","ELE-B","5B3 DSP LAB/ 5B1 HDL LAB","5B3 DSP LAB/ 5B1 HDL LAB","5B3 DSP LAB/ 5B1 HDL LAB"],["ELE-A","DCS","DCS TUT"]]
+            // id: req.body.id,
+            // tt:[["MEP","DCS","DSP","ELE-A","DSDV","DSDV TUT", "TUT"],["5B1 DSP LAB/ 5B2 HDL LAB","5B1 DSP LAB/ 5B2 HDL LAB","5B1 DSP LAB/ 5B2 HDL LAB","ELE-B","DSP","DSP TUT","TUT"],["DSP","DCS","MEP","ELE-A","5B2-DSP LAB / 5B3 HDL LAB","5B2-DSP LAB / 5B3 HDL LAB","5B2-DSP LAB / 5B3 HDL LAB"],["DCS","DSDV","ET","ELE-B","MEP","MEP TUT"],["DSDV","DSP","ET","ELE-B","5B3 DSP LAB/ 5B1 HDL LAB","5B3 DSP LAB/ 5B1 HDL LAB","5B3 DSP LAB/ 5B1 HDL LAB"],["ELE-A","DCS","DCS TUT"]]
     })
     try {
       const newSubscriber = await timetable.save()
@@ -25,21 +25,9 @@ router.get('/gdsc', async (req, res) => {
       res.status(400).json({ message: err.message })
     }
   })
-    
-
-router.get('/three',(req,res)=>{
-    console.log("3");
-    res.send("three objects");
-   
-});
-router.get('/four',(req,res)=>{
-    console.log("4");
-    res.send("four objects");
-});
-router.get('/',(req,res)=>{
+    router.get('/',(req,res)=>{
     console.log("homepage");
-    res.send("welcome to GDSC APP");
- 
+    res.send("GDSC DSI API is up and running!!");
 });
 
  export default router;
