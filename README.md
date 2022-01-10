@@ -1,5 +1,5 @@
 # API for [Schedura](https://github.com/GDSC-DSI/Schedura)
-[![GitHub contributors](https://img.shields.io/github/contributors/GDSC-DSI/api)](https://github.com/GDSC-DSI/api/graphs/contributors) [![GitHub issues](https://img.shields.io/github/issues/HAC-2020/Aimers)](https://github.com/GDSC-DSI/api/issues/) [![apkSize](https://img.shields.io/badge/Web%20App%20size-32MB-blue)]() <br/>  
+[![GitHub contributors](https://img.shields.io/github/contributors/GDSC-DSI/api)](https://github.com/GDSC-DSI/api/graphs/contributors) [![GitHub issues](https://img.shields.io/github/issues/HAC-2020/Aimers)](https://github.com/kitarp29/api/issues/) [![apkSize](https://img.shields.io/badge/Web%20App%20size-32MB-blue)]() <br/>  
 ## Overview
 The API is a basic REST API written to be called by the App built under Android Study Jams 2021. We built this API under the Org. [**Google Developer Student Club - DSI**](https://gdsc.community.dev/dayananda-sagar-institutions-bengaluru/).
 There is basic work of the API is to provide routes to *GET* and *POST* the timetable of different classes that are conducted on our college campus. This app provides the data for the classes happening at [Dayananda Sagar College of Engineering, Bangalore](http://dsce.edu.in/) in real-time.
@@ -21,12 +21,16 @@ Minimun requirements:
 - Any Code Editor
 - Internet Browser
 - Internet
-
-### Steps to set up locally
+## Docker Setup:
+- First make sure your laptop has Docker
+- Open terminal, run ```docker pull kitarp29/gdsc_dsi_api:1.0```
+- Run ```docker run -e  DATABASE_URL -d --name pk -p 5000:5000 kitarp29/gdsc_dsi_api:1.0```
+- The API is running at  [http://localhost:5000/](http://localhost:5000/)
+## Steps to set up locally
 - Clone the Repo
 - Open in any code editor
 - In index.js replace ```process.env.DATABASE_URL``` with the URL of your MongoDB Database
-- In your terminal, run: ``` npm i``` (supposing you have npm, commands might difffer for yarn)
+- In your terminal, run: ``` npm i``` (supposing you have npm, commands might differ for yarn)
 - Now, run: ```nodemon index.js```
  
 This should start a server running at [http://localhost:5000/](http://localhost:5000/)
