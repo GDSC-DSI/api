@@ -51,7 +51,9 @@ This should start a server running at [http://localhost:5000/](http://localhost:
 - Deploy it in a K8s Cluster
 - Add Monitoring tools for the server like ELK, Prometheus, and Grafana
 
-<iframe width="894" height="503" src="https://www.youtube.com/embed/vy-VxlAXBSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+https://user-images.githubusercontent.com/74984914/149630698-50b73655-3bfa-4942-9575-dd68350e086c.mp4
 
 
 ### Thanks for the interest in our API :)
