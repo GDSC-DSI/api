@@ -11,7 +11,7 @@ router.get('/gdsc', async (req, res) => {
       res.status(500).json({ message: err.message })
     }
   })
- 
+// In futher updates We will give the option to upload as well
 //   router.post('/pk', async (req, res) => {
 //     const timetable = new TimeTable({
 //             id: "19ECEB",
