@@ -62,3 +62,4 @@ typings/
 
 #vs code configurations
 .vscode/
+node_modules
